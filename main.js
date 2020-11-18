@@ -1,5 +1,6 @@
 // need to retreive name, address, phone numbers, thumbnail, birthdate, and the date they became a member (stored as registered.date).
 
+
 const customerCards = document.createElement('div')
 customerCards.classList.add('customer-cards')
 
@@ -31,17 +32,22 @@ function monthNumberToString(month){
     }
 }
 
-console.log(usStates)
+
+
 
 for (let customer of customers) {
     console.log(customer)
+
+
+    
+    
     // create and setup person container
     const personContainer = document.createElement('div')
     personContainer.classList.add("person")
     
     // create image tag and assign image source
     const customerImage = document.createElement('img')
-    customerImage.src = customer.picture.thumbnail
+    customerImage.src = customer.picture.medium
     personContainer.appendChild(customerImage)
     customerImage.classList.add('image')
     
@@ -50,7 +56,6 @@ for (let customer of customers) {
     function capitalName(name) {
         return name.charAt(0).toUpperCase() + name.slice(1)
     }
-
     customerName.innerText = capitalName(customer.name.first) + " " + capitalName(customer.name.last)
     personContainer.appendChild(customerName)
     customerName.classList.add('customer-name')
@@ -64,6 +69,7 @@ for (let customer of customers) {
     // create location container that will house the address components
     const customerLocation = document.createElement('div')
     personContainer.appendChild(customerLocation)
+    customerLocation.classList.add('location')
     
     // create street element inside customerLocation container
     const customerAddress = document.createElement('p')
@@ -84,12 +90,14 @@ for (let customer of customers) {
     customerDOB.innerText = "DOB: " + monthNumberToString(dob.getMonth()) + " " + dob.getDate() + ", " + dob.getFullYear()
     console.log(customerDOB)
     personContainer.appendChild(customerDOB)
+    customerDOB.classList.add('dob')
 
     // create membership start date inside personContainer
     const customerMembership = document.createElement('p')
     const membershipDate = new Date(customer.registered.date)
     customerMembership.innerText = "Member since: " + monthNumberToString(dob.getMonth()) + " " + dob.getDate() + ", " + dob.getFullYear()
     personContainer.appendChild(customerMembership)
+    customerMembership.classList.add('membership')
 
     // we're done adding content to person, add the person
     // to the customerCards container
@@ -101,10 +109,3 @@ for (let customer of customers) {
 const body = document.querySelector('body')
 body.appendChild(customerCards)
 
-
-
-
-
-
-// document.querySelector('body').appendChild(customerCards)
-// customerCards.classList.add('customers-card')

@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+.directory-header {
+    font-size: 30px;
+}
+
 .customer-cards {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +15,6 @@
 
 .person {
     margin: 5px;
-    border: 2px solid purple;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -19,7 +22,7 @@
 }
 
 .image {
-    border-radius: 100%;
+    border-radius: 100% 250%;
 }
 
 .customer-name {
@@ -31,4 +34,21 @@
     font-size: 80%;
 }
 
-.
+.location {
+    font-size: 80%;
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dob {
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.membership {
+    font-size: 80%;
+    font-weight: bold;
+}
