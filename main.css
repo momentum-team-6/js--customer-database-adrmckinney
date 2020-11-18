@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.customer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.person {
+    margin: 5px;
+    border: 2px solid purple;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    border-radius: 100%;
+}
+
+.customer-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.email {
+    font-size: 80%;
+}
+
+.
